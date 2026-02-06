@@ -30,7 +30,7 @@ Este ecosistema está compuesto por:
 ├── kitty/         # Fuentes y colores de la terminal
 └── zsh/           # Alias y funciones de la shell
 
-🚀 Instalación Rápida
+## 🚀 Instalación Rápida
 
     Clona el repositorio:
 git clone [https://github.com/DaBit-Code/HyprArch-Dotfiles.git](https://github.com/DaBit-Code/HyprArch-Dotfiles.git)
@@ -42,7 +42,7 @@ cp zsh/.zshrc ~/
 
 Dependencias necesarias: Asegúrate de tener instalados: hyprland, waybar, kitty, neovim, zsh, starship, ttf-font-awesome y otf-cascadia-code.
 
-🛡️ Scripts Especiales (Waybar)
+## 🛡️ Scripts Especiales (Waybar)
 
 He incluido scripts personalizados para auditores y sysadmins:
 
