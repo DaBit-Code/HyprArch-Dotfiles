@@ -85,7 +85,8 @@ Este proyecto está bajo la **Licencia MIT**. Siéntete libre de copiar, modific
 > **Disclaimer:** Estas configuraciones funcionan perfectamente en mi máquina. No me hago responsable por mentes explotadas o sistemas de archivos corrompidos por falta de cafeína. 😉
 
 ## 👨‍💻 Mantenido por:
-**DaBit-Code** 🫡🔥  
+**DaBit-Code** 🫡🔥 
+dabit@tutamail.com
 *Arch Linux Enthusiast & Hyprland Crafter*
 
 ---
