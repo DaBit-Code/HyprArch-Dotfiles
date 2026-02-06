@@ -84,10 +84,13 @@ Este proyecto está bajo la **Licencia MIT**. Siéntete libre de copiar, modific
 
 > **Disclaimer:** Estas configuraciones funcionan perfectamente en mi máquina. No me hago responsable por mentes explotadas o sistemas de archivos corrompidos por falta de cafeína. 😉
 
-## 👨‍💻 Mantenido por:
+---
+
+### 👨‍💻 Mantenido por:
 **DaBit-Code** 🫡🔥  
 📩 [Contactar vía GitHub](mailto:249235645+DaBit-Code@users.noreply.github.com)  
 *Arch Linux Enthusiast & Hyprland Crafter*
+
 ---
 
 ¡Disfruta del setup y que el `pacman -Syu` te acompañe siempre!
