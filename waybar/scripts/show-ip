@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Ruta unificada
+FILE="$HOME/.config/waybar/scripts/ip_state.txt"
+
+# Intentamos obtener la IP con un timeout de 3 segundos para no bloquear la barra
+PUBLIC_IP=$(curl -s --max-time 3 https://ifconfig.me)
+
+if [ -n "$PUBLIC_IP" ]; then
+  echo "$PUBLIC_IP" >"$FILE"
+else
+  echo "OFFLINE" >"$FILE"
+fi

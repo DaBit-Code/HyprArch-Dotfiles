@@ -1,0 +1,199 @@
+/* =============================================================================
+   BARRA TOP: IP CAPSULES, WORKSPACES, CLOCK, POWER (SLIM EDITION)
+   ============================================================================= */
+
+/* --- RESET GENERAL --- */
+* {
+    border: none;
+    font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free";
+}
+
+window#waybar {
+    background: rgba(0, 0, 0, 0);
+    min-height: 0; /* Permitimos que la barra se encoja */
+}
+
+/* --- LANZADORES / ICONOS SUELTOS --- */
+#custom-arch { color: #00bfff; font-size: 18px; padding: 0 10px; }
+
+/* --- CAPSULAS DE RED (SLIM) --- */
+#custom-iloc, #custom-target_icon, #custom-public_icon {
+    background-color: #383c4a;
+    border-radius: 12px 0 0 12px;
+    font-size: 16px;
+    margin: 8px 0;      /* Aumentamos margen para reducir altura de la píldora */
+    padding: 0 10px;    
+    min-height: 24px;   
+}
+
+#custom-ip_local, #custom-target, #custom-ip_public {
+    color: #1a1b26;
+    border-radius: 0 12px 12px 0;
+    font-family: "JetBrainsMono Nerd Font";
+    font-weight: bold;
+    font-size: 12px;
+    margin: 8px 15px 8px 0; 
+    padding: 0 12px;
+    min-height: 24px;   
+}
+
+/* Colores Cápsulas */
+#custom-iloc { color: #00bfff; margin-left: 15px; }
+#custom-ip_local { background-color: #00bfff; }
+#custom-target_icon { color: #ff5555; }
+#custom-target { background-color: #ff5555; color: #ffffff; }
+#custom-public_icon { color: #50fa7b; }
+#custom-ip_public { background-color: #50fa7b; }
+
+/* --- WORKSPACES RGB (REDUCCIÓN QUIRÚRGICA) --- */
+#workspaces {
+    background-color: #282a36;
+    margin: 8px 0;      /* Alineado con las IPs */
+    border-radius: 12px;
+    padding: 0 5px;
+}
+
+#workspaces button {
+    font-size: 18px;    /* Bajamos de 24 a 18 para que sea Slim */
+    padding: 0 8px;
+    margin: 2px; 
+    min-width: 30px;    /* Bajamos de 44 a 30 */
+    min-height: 20px;   /* Bajamos de 44 a 20 - LA CLAVE */
+    transition: all 0.3s ease;
+    background: transparent;
+    color: #6272a4; 
+    border: 2px solid transparent;
+}
+
+#workspaces button.active { color: #8be9fd; }
+#workspaces button:not(.empty):not(.active) { color: #50fa7b; }
+
+#workspaces button:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    color: #ffffff;
+    animation: rgb-border 2s infinite linear;
+}
+
+@keyframes rgb-border {
+    0%   { border-color: #ff5555; }
+    33%  { border-color: #50fa7b; }
+    66%  { border-color: #8be9fd; }
+    100% { border-color: #ff5555; }
+}
+
+/* --- VPN, RELOJ Y POWER (UNIFICADOS) --- */
+#custom-vbox, #custom-vmware, #custom-qemu, #custom-vpn, #clock, #custom-powermenu, #tray {
+    background-color: #44475a;
+    color: #f8f8f2;
+    font-weight: bold;
+    border-radius: 12px;
+    padding: 0 12px;
+    margin: 8px 3px;    /* Misma altura que el resto */
+    min-height: 24px;
+    font-size: 12px;
+}
+
+/* Color distintivo para QEMU (un Cyan o Azul Tech) */
+#custom-qemu {
+    color: #8be9fd; 
+    border: 1px solid #8be9fd;
+}
+
+#custom-qemu:hover {
+    background-color: #8be9fd;
+    color: #282a36;
+}
+
+#custom-vmware {
+    color: #f39c12; /* Un tono naranja elegante */
+    border: 1px solid #f39c12;
+}
+
+#custom-vmware:hover {
+    background-color: #f39c12;
+    color: #282a36;
+}
+
+#custom-vbox {
+    color: #bf00ff;
+    border: 1px solid #bf00ff;
+}
+
+#custom-vbox:hover {
+    background-color: #bf00ff;
+    color: #282a36;
+}
+
+#custom-vpn { color: #ffb86c; border: 1px solid #ffb86c; }
+#custom-powermenu { color: #ff5555; background-color: #282a36; border: 1px solid #44475a; margin-right: 15px; }
+#tray { background-color: #282a36; }
+
+/* =============================================================================
+   BARRA LATERAL IZQUIERDA: SISTEMA Y MONITOREO
+   ============================================================================= */
+
+/* Estilo base para todos los módulos de la izquierda */
+#custom-tux,
+#custom-lwolf,
+#custom-mullvad,
+#cpu,
+#temperature,
+#pulseaudio,
+#backlight,
+#network,
+#bluetooth,
+#battery {
+    background-color: #282a36; /* Mismo fondo que tus cápsulas del centro */
+    border: 1px solid #44475a;
+    border-radius: 12px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    margin-left: 4px;
+    margin-right: 4px;
+    
+    min-width: 42px;    /* Ancho fijo para centrado */
+    padding: 10px 0;   /* Espaciado vertical */
+    font-size: 18px;   /* Tamaño de icono uniforme */
+    transition: all 0.3s ease;
+}
+
+/* --- COLORES ESPECÍFICOS Y ESTADOS --- */
+
+#custom-tux { color: #50fa7b; } 
+#custom-lwolf { color: #ff6600; }
+#custom-mullvad { color: #ffd700; }
+#cpu { color: #8be9fd; }
+#temperature { color: #ffb86c; }
+#temperature.critical { color: #ff5555; }
+
+/* Volumen */
+#pulseaudio { color: #bd93f9; }
+#pulseaudio.bluetooth { color: #ff79c6; }
+
+/* Red y Bluetooth */
+#network { color: #8be9fd; }
+#network.disconnected { color: #ff5555; }
+#bluetooth { color: #6272a4; }
+#bluetooth.connected { color: #50fa7b; }
+
+/* --- LÓGICA DE BRILLO (DEGRADADO) --- */
+#backlight.low { color: #6272a4; }    /* Azulado frío */
+#backlight.medium { color: #f1fa8c; } /* Amarillo sol */
+#backlight.high { color: #ffffff; }   /* Blanco radiante */
+
+/* --- LÓGICA DE BATERÍA (DEGRADADO) --- */
+#battery { color: #50fa7b; } /* Verde base */
+#battery.high { color: #8be9fd; }
+#battery.medium { color: #50fa7b; }
+#battery.low { color: #ffb86c; }
+#battery.critical:not(.charging) { 
+    color: #ff5555; 
+    animation: blink 1s steps(5, start) infinite; 
+}
+#battery.charging { color: #f1fa8c; }
+
+/* Animación de alerta */
+@keyframes blink {
+    to { background-color: #ff5555; color: #ffffff; }
+}

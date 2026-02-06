@@ -1,0 +1,148 @@
+[
+  // ==========================================
+  // BARRA SUPERIOR: HACKING PANEL (Horizontal)
+  // ==========================================
+  {
+    "layer": "top",
+    "position": "top",
+    "height": 40,
+    "margin-top": 5,
+    "margin-left": 10,
+    "margin-right": 10,
+    "modules-left": [
+        "custom/arch", 
+        "custom/iloc", "custom/ip_local", 
+        "custom/target_icon", "custom/target", 
+        "custom/public_icon", "custom/ip_public"
+    ],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["custom/vbox", "custom/vmware", "custom/qemu", "custom/vpn", "clock", "custom/powermenu"],
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": false,
+        "format": "{icon}",
+        "format-icons": {
+            "1": "󰲠", "2": "󰲢", "3": "󰲤", "4": "󰲦", "5": "󰲨",
+            "6": "󰲪", "7": "󰲬", "8": "󰲮", "9": "󰲰", "10": "",
+            "active": "󰮯", "default": "", "urgent": "󱓈"
+        }
+    },
+    
+    "clock": {
+        "format": "󰃭 {:%d %b  󰥔 %H:%M}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+    "custom/vmware": {
+        "format": "  VMWARE", 
+        "on-click": "vmware &",
+        "tooltip": true,
+    },
+
+    "custom/vbox": {
+        "format": "  VBOX",
+        "on-click": "virtualbox &",
+        "tooltip": true,
+    },
+
+    "custom/vpn": {
+        "format": "VPN 󰖂", // Texto e icono fijo para prueba
+        "on-click": "wofi --show dmenu", // Para probar el click
+        "interval": 1,
+        "tooltip": false
+    },
+
+    "custom/qemu": {
+        "format": "󰘧 QEMU",
+        "on-click": "virt-manager",        // Abre la interfaz gráfica
+        "on-click-right": "kitty -e virsh list --all", // Click derecho para ver estado en terminal
+        "tooltip-format": "Lanzar Virt-Manager / virsh"
+    },
+
+    "custom/arch": { "format": "", "on-click": "wofi --show drun", "tooltip": false },
+    "custom/iloc": { "format": "󰟀", "tooltip-format": "IP Local Activa" },
+    "custom/ip_local": {
+      "exec": "ip -4 addr show | grep -oP '(?<=inet\\s)\\d+(\\.\\d+){3}' | grep -v '^127' | head -n1",
+      "interval": 10
+    },
+    "custom/target_icon":{ "format": "󰓾", "tooltip-format": "IP Objetivo (Target)"},
+    "custom/target": { "exec": "cat ~/.config/waybar/scripts/target.txt 2>/dev/null || echo 'NONE'", "interval": 5 },
+    "custom/public_icon": { "format": "󰖟", "tooltip-format": "Estado de IP Pública"},
+    "custom/ip_public": { "exec": "cat ~/.config/waybar/scripts/ip_state.txt 2>/dev/null || echo 'NONE'", "interval": 5 },
+    "custom/powermenu": { "format": "", "on-click": "wlogout", "tooltip": false }
+  },
+
+  // ==========================================
+  // BARRA LATERAL: SYSTEM DOCK (Vertical)
+  // ==========================================
+  {
+    "layer": "top",
+    "position": "left",
+    "width": 50,
+    "margin-left": 5,
+    "margin-top": 10,
+    "margin-bottom": 10,
+    "spacing": 15,
+    "modules-center": ["custom/tux", "custom/lwolf", "custom/mullvad", "cpu", "temperature", "pulseaudio", "backlight", "network","bluetooth", "battery" ],
+ 
+
+    "custom/tux": {
+      "format": "",
+      "on-click": "kitty --hold -e fastfetch",
+      "tooltip-format": "Sistema: Tux Stats"
+    },
+    "custom/lwolf": { "format": "", "on-click": "librewolf", "tooltip": false },
+    "custom/mullvad": { "format": "", "on-click": "~/Programs/Mullvad/mullvad-browser-linux-x86_64-15.0.4/mullvad-browser/Browser/mullvadbrowser", "tooltip": false },
+    
+    "cpu": { "format": "", "tooltip-format": "Uso de CPU: {usage}%" },
+    "temperature": { "format": "", "tooltip-format": "Temperatura: {temperatureC}°C" },
+
+    "pulseaudio": {
+      "format": "{icon}",
+      "format-muted": "󰝟",
+      "format-icons": { "default": ["󰕿", "󰖀", "󰕾"] },
+      "on-click": "pavucontrol",
+      "tooltip-format": "Volumen: {volume}%"
+    },
+    "backlight": {
+      "device": "intel_backlight", // O el nombre de tu control de brillo
+      "format": "{icon}",
+      "format-icons": ["󰃞", "󰃟", "󰃠"],
+      "states": {
+        "low": 0,
+        "medium": 40,
+        "high": 80
+      },
+    "tooltip-format": "Brillo: {percent}%"
+    },
+    "network": {
+      "format-wifi": "󰖩",
+      "format-ethernet": "󰈀",
+      "format-disconnected": "󰖪",
+      "tooltip-format": "WiFi: {essid} ({signalStrength}%)\nIP: {ipaddr}",
+      "on-click": "networkmanager_dmenu"
+    },
+
+    "bluetooth": {
+      "format": "",
+      "format-disabled": "󰂲", 
+      "format-connected": "󰂱 {device_alias}",
+      "tooltip-format": "{controller_alias}\t{controller_address}",
+      "on-click": "blueman-manager"
+    },
+
+    "battery": {
+    "states": {
+        "high": 90,
+        "medium": 50,
+        "low": 25,
+        "critical": 15
+    },
+    "format": "{icon}",
+    "format-charging": "󱐋", // Icono de rayito cuando carga
+    "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+    "tooltip-format": "Carga: {capacity}%"
+   }
+  }
+]

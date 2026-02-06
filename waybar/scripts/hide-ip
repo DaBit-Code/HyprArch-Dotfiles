@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# Ruta unificada
+FILE="$HOME/.config/waybar/scripts/ip_state.txt"
+
+echo "HIDDEN" >"$FILE"
