@@ -23,3 +23,9 @@ alias st='~/.config/waybar/scripts/set-target'
 eval "$(starship init zsh)"
 
 export PATH="$HOME/.config/waybar/scripts:$PATH"
+
+# Mapeo de teclas Inicio y Fin
+bindkey '^[[H' beginning-of-line
+bindkey '^[[F' end-of-line
+# Opcional: Mapeo de la tecla Suprimir (Delete) si también te falla
+bindkey '^[[3~' delete-char
