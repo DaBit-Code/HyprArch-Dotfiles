@@ -58,6 +58,21 @@ He incluido scripts personalizados para auditores y sysadmins:
 
 ---
 
+---
+
+## 📦 Dependencias de Aplicaciones (Opcionales)
+
+Para que todos los accesos directos, cápsulas e iconos de la **Waybar** y los atajos de teclado funcionen al 100%, recomiendo tener instaladas las siguientes herramientas:
+
+## 🛠️ Virtualización & Sistemas
+      * **Virtualización:** `virtualbox`, `vmware-workstation` o `qemu`. (Ideales para tus entornos de pruebas).
+      * **Navegadores:** * [LibreWolf](https://librewolf.net/) (Enfoque en privacidad).
+        * [Mullvad Browser](https://mullvad.net/en/browser) (Seguridad máxima).
+
+> **Nota:** Si no usas estas herramientas, los iconos en la barra serán meramente estéticos. Puedes editar los archivos en `waybar/config.jsonc` para apuntar a tus navegadores o apps favoritas.
+
+---
+
 ## 🖥️ Configuración de Monitores & Workspaces
 
 Mi setup está optimizado para una experiencia de **Doble Monitor**, donde los espacios de trabajo (Workspaces) están distribuidos de forma lógica para maximizar la productividad.
