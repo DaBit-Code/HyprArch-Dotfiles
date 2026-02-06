@@ -29,3 +29,25 @@ Este ecosistema está compuesto por:
 ├── nvim/          # Configuración de Neovim
 ├── kitty/         # Fuentes y colores de la terminal
 └── zsh/           # Alias y funciones de la shell
+
+🚀 Instalación Rápida
+
+    Clona el repositorio:
+git clone [https://github.com/DaBit-Code/HyprArch-Dotfiles.git](https://github.com/DaBit-Code/HyprArch-Dotfiles.git)
+cd HyprArch-Dotfiles
+
+    Copia las configuraciones: Advertencia: Esto sobrescribirá tus archivos actuales. Haz un respaldo primero.
+cp -r hypr waybar nvim kitty ~/.config/
+cp zsh/.zshrc ~/
+
+Dependencias necesarias: Asegúrate de tener instalados: hyprland, waybar, kitty, neovim, zsh, starship, ttf-font-awesome y otf-cascadia-code.
+
+🛡️ Scripts Especiales (Waybar)
+
+He incluido scripts personalizados para auditores y sysadmins:
+
+    show-ip / hide-ip: Gestión visual de tu dirección IP Pública en la barra.
+
+    set-target: Define un objetivo (IP/Dominio) para tenerlo siempre a la vista mientras trabajas. Puedes usar el alias #st IP/Dominio para fijar y #st sólo para limpiar.
+
+    minifetch.sh: Un resumen rápido del sistema.
