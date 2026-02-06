@@ -86,8 +86,8 @@ Este proyecto está bajo la **Licencia MIT**. Siéntete libre de copiar, modific
 
 ---
 
-### 👨‍💻 Mantenido por:
-**DaBit-Code** 🫡🔥  
+## 👨‍💻 Mantenido por:
+**DaBit-Code**  
 📩 [Contactar vía GitHub](mailto:249235645+DaBit-Code@users.noreply.github.com)  
 *Arch Linux Enthusiast & Hyprland Crafter*
 
