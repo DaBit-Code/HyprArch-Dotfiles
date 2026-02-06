@@ -55,3 +55,39 @@ He incluido scripts personalizados para auditores y sysadmins:
     set-target: Define un objetivo (IP/Dominio) para tenerlo siempre a la vista mientras trabajas. Puedes usuar los alias #st IP/Dominio para fija y #st solo para limpiar.
 
     minifetch.sh: Un resumen rápido del sistema.
+
+---
+
+## 🖥️ Configuración de Monitores & Workspaces
+
+Mi setup está optimizado para una experiencia de **Doble Monitor**, donde los espacios de trabajo (Workspaces) están distribuidos de forma lógica para maximizar la productividad.
+
+## 📊 Distribución de Pantallas
+      | Monitor | Resolución | Tasa de Refresco | Workspaces Asignados |
+      | :--- | :--- | :--- | :--- |
+      | **Principal (DP-1)** | 1920x1080 | 144Hz | `1, 2, 3, 4, 5` |
+      | **Secundario (HDMI-A-1)** | 1920x1080 | 60Hz | `6, 7, 8, 9, 10` |
+
+## 🧠 Gestión Inteligente de Espacios
+      He configurado Hyprland para que sea **resiliente**:
+      * **Persistencia:** Cada workspace tiene un "hogar" definido.
+      * **Modo On-the-Go (Fallback):** Si desconectas el monitor secundario o decides usar solo una pantalla, **Hyprland remapea automáticamente todos los Workspaces (1-10)** al monitor existente. ¡Nada se pierde, solo se mueve!
+      * **Resoluciones:** Si tus monitores tienen resoluciones distintas, el archivo `hyprland.conf` está comentado para que ajustes el posicionamiento (`x,y`) en un segundo.
+
+---
+
+---
+
+## 📜 Licencia & Mantenimiento
+
+Este proyecto está bajo la **Licencia MIT**. Siéntete libre de copiar, modificar y distribuir estas configuraciones. La idea es que la comunidad crezca y cada quien le dé su toque personal.
+
+> **Disclaimer:** Estas configuraciones funcionan perfectamente en mi máquina. No me hago responsable por mentes explotadas o sistemas de archivos corrompidos por falta de cafeína. 😉
+
+## 👨‍💻 Mantenido por:
+**DaBit-Code** 🫡🔥  
+*Arch Linux Enthusiast & Hyprland Crafter*
+
+---
+
+¡Disfruta del setup y que el `pacman -Syu` te acompañe siempre!
