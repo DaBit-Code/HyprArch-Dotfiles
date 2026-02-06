@@ -75,7 +75,7 @@ sudo pacman -S virtualbox qemu-full virt-manager
 # Usando un helper de AUR (como yay o paru)
 yay -S librewolf-bin mullvad-browser-bin
 ```
-💡 Pro Tip: Si prefieres usar Firefox o Brave, simplemente edita los archivos en ~/.config/hypr/hyprland.conf y cambia la variable del navegador por la de tu preferencia.
+💡 Tip: Si prefieres usar Firefox o Brave, simplemente edita los archivos en ~/.config/hypr/hyprland.conf y cambia la variable del navegador por la de tu preferencia.
 
 
 > **Nota:** Si no usas estas herramientas, los iconos en la barra serán meramente estéticos. Puedes editar los archivos en `waybar/config.jsonc` para apuntar a tus navegadores o apps favoritas.
@@ -100,7 +100,28 @@ Mi setup está optimizado para una experiencia de **Doble Monitor**, donde los e
 
 ---
 
+## ⚙️ Ajustes de Rutas Importantes
+
+Para que la estética y las funciones de red funcionen perfectamente, verifica estas dos rutas en tu configuración:
+
+## 🖼️ Wallpapers (Fondos de Pantalla)
+El script de inicio busca las imágenes en una carpeta específica. Asegúrate de mover tus fondos favoritos aquí:
+* **Ruta:** `~/.config/wp/`
+```bash
+mkdir -p ~/.config/wp
+# Copia tus fondos a esa carpeta para que Hyprpaper/SWWW los reconozca
+```
 ---
+
+🦊 Configuración de Mullvad Browser
+
+Si descargas Mullvad Browser manualmente (Portable), debes apuntar el ejecutable en tu configuración de Hyprland o Waybar.
+
+      Ejemplo de ruta: ~/Programs/Mullvad/mullvad-browser-linux-x86_64-15.0.4/mullvad-browser/Browser/mullvadbrowser
+
+💡 Tip: Para que sea más fácil, te recomiendo crear un enlace simbólico para que el comando mullvad-browser funcione desde cualquier lugar:
+
+    sudo ln -s /ruta/a/tu/mullvadbrowser /usr/local/bin/mullvad-browser
 
 ## 📜 Licencia & Mantenimiento
 
