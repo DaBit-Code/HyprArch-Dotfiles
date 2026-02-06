@@ -62,12 +62,21 @@ He incluido scripts personalizados para auditores y sysadmins:
 
 ## 📦 Dependencias de Aplicaciones (Opcionales)
 
-Para que todos los accesos directos, cápsulas e iconos de la **Waybar** y los atajos de teclado funcionen al 100%, recomiendo tener instaladas las siguientes herramientas:
+Para que los iconos, cápsulas de la **Waybar** y atajos de teclado funcionen al 100%, puedes instalar las aplicaciones vinculadas con los siguientes comandos:
 
-## 🛠️ Virtualización & Sistemas
-      * **Virtualización:** `virtualbox`, `vmware-workstation` o `qemu`. (Ideales para tus entornos de pruebas).
-      * **Navegadores:** * [LibreWolf](https://librewolf.net/) (Enfoque en privacidad).
-        * [Mullvad Browser](https://mullvad.net/en/browser) (Seguridad máxima).
+### 🖥️ Virtualización (Entornos de prueba)
+```bash
+# Elige tu preferido o instala todos:
+sudo pacman -S virtualbox qemu-full virt-manager
+```
+
+🌐 Navegadores (Privacidad & Seguridad)
+```bash
+# Usando un helper de AUR (como yay o paru)
+yay -S librewolf-bin mullvad-browser-bin
+```
+💡 Pro Tip: Si prefieres usar Firefox o Brave, simplemente edita los archivos en ~/.config/hypr/hyprland.conf y cambia la variable del navegador por la de tu preferencia.
+
 
 > **Nota:** Si no usas estas herramientas, los iconos en la barra serán meramente estéticos. Puedes editar los archivos en `waybar/config.jsonc` para apuntar a tus navegadores o apps favoritas.
 
