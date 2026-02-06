@@ -5,8 +5,7 @@ Bienvenido a mi configuración personal de **Hyprland** sobre **Arch Linux**. Un
 ---
 
 ## 📸 Capturas de Pantalla
-![Desktop Preview](https://tu-enlace-a-una-imagen.png)
-*Si tienes una captura de tu escritorio, súbela a GitHub y reemplaza este enlace para presumir el setup.*
+![Desktop Preview](desktop_preview.png)
 
 ---
 
