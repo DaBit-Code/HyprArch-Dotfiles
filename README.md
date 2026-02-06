@@ -108,8 +108,8 @@ Para que la estética y las funciones de red funcionen perfectamente, verifica e
 El script de inicio busca las imágenes en una carpeta específica. Asegúrate de mover tus fondos favoritos aquí:
 * **Ruta:** `~/.config/wp/`
 ```bash
-mkdir -p ~/.config/wp
-# Copia tus fondos a esa carpeta para que Hyprpaper/SWWW los reconozca
+      mkdir -p ~/.config/wp
+      # Copia tus fondos a esa carpeta para que Hyprpaper/SWWW los reconozca
 ```
 ---
 
@@ -121,7 +121,8 @@ Si descargas Mullvad Browser manualmente (Portable), debes apuntar el ejecutable
 
 💡 Tip: Para que sea más fácil, te recomiendo crear un enlace simbólico para que el comando mullvad-browser funcione desde cualquier lugar:
 
-    sudo ln -s /ruta/a/tu/mullvadbrowser /usr/local/bin/mullvad-browser
+      sudo ln -s /ruta/a/tu/mullvadbrowser /usr/local/bin/mullvad-browser
+---
 
 ## 📜 Licencia & Mantenimiento
 
